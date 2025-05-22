@@ -1,200 +1,161 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
 
 :root {
-    --laranja-claro: #FF862A;
-    --alto-contraste-fundo: #000000;
-    --alto-contraste-texto: #ffffff;
-    --alto-contraste-link: #ffd700;
+    --branco: rgb(0, 0, 0);
+    --cor-de-fundo: #190337;
+    --fundo-senha: #401c6b;
+    --fundo-texto: #783197;
+    --borda: #6e2993;
+    --roboto: 'Roboto', sans-serif;
+    --roboto-mono: 'Roboto Mono', monospace;
+}
+
+* {
+    font-weight: 400;
 }
 
 body {
-    font-size: 1rem;
-    font-family: 'Montserrat';
+    color: var(--branco);
+    background-color: var(--cor-de-fundo);
+    font-family: var(--roboto);
 }
 
-header {
-    background-color: #ffffff;
+.titulo-principal {
+    ￼ Letras minúsculas
+    ￼ Números
+    ￼ Símbolos
+    Força da senha
+    
 }
 
-
-section {
-    padding-bottom: 5rem;
+.titulo-secundario {
+    font-size: 24px;
 }
 
-
-.nav-link {
-    color: #CB6D43;
-    font-weight: 600;
+.conteudo-titulo {
+    text-align: center;
+    margin-top: 80px;
 }
 
-.inicio-fundo {
-    /* aula 3 */
-    background-image: url('img/4965007.jpg');
-    /* Substitua pelo caminho da sua imagem */
-    background-size: cover;
-    background-position: right;
-    border-radius: 80px;
-    width: 100%;
-    height: 606px;
-    padding: 40px;
+.conteudo-senha {
+    margin-top: 80px;
+    background: var(--fundo-senha);
+    padding: 24px;
+    border-bottom: 6px solid var(--borda);
+}
+
+#campo-senha {
+    background-color: var(--fundo-senha);
+    border: none;
+    color: var(--branco);
+    font-family: var(--roboto-mono);
+    font-size: 40px;
+    width: 70%;
+}
+
+#campo-senha:focus {
+    outline: none;
+}
+
+.conteudo {
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-/* posicionamento para a imagem à direita */
-.img-inicio {
-    position: absolute;
-    right: 0;
-    top: 18rem;
-    width: 45rem;
-    height: auto;
+.parametro {
+    background-color: var(--fundo-texto);
+    border: 2px solid var(--borda);
+    margin-top: 32px;
+    padding: 24px;
 }
 
+.parametro-titulo {
+    font-family: var(--roboto-mono);
+    font-size: 28px;
+}
 
-.esquerda-conteudo {
+.parametro-senha__titulo {
+    font-size: 24px;
+}
+
+.parametro-coluna__senha {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-
-.botao-inicio {
-    background-color: var(--laranja-claro);
-    border-radius: 30px;
-    border: none;
-    width: 14em;
-    height: 3em;
-    align-content: center;
-
-}
-
-.display-4 {
-    text-shadow: -5px 5px var(--laranja-claro);
-}
-
-
-#maquiagem {
-    position: relative;
-    padding-top: 5rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    background: url('img/flor.png') top right no-repeat,
-        url('img/flor-esquerda.png') bottom left no-repeat;
-    background-size: 180px 180px;
-    /* Ajuste o tamanho conforme necessário */
-}
-
-#maquiagem .container {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    position: relative;
-    z-index: 1;
-    /* Garante que o conteúdo fica acima das imagens do background */
 }
 
-
-h2 {
-    font-family: 'Lemon', serif;
-    font-size: 2.5em;
-    font-style: normal;
-    color: var(--laranja-claro);
+.parametro-senha {
+    width: 50%;
+    margin: 0 auto;
 }
 
-#galeria {
-    background-color: #FAF4F4;
-
-}
-
-.fundo-galeria {
-    background: url('img/flor-bottom-direita.png') bottom right no-repeat;
-    background-size: 180px 180px;
-}
-
-#contato {
-    background-image: url('img/4965007.jpg');
-    background-size: cover;
-    padding: 4rem 0;
-    /* Espaçamento interno para a seção de contato */
-
-}
-
-.formulario {
-    background-color: #ffffff;
-    padding: 2rem;
-    /* Espaçamento interno dentro do formulário */
-    border-radius: 10px;
-    /* Borda arredondada para o formulário */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para destacar o formulário */
-    font-weight: bold;
-}
-
-.formulario button {
-    background-color: #CB6D43;
-    border: none;
-    font-weight: bold;
-}
-
-.form-control {
-    background-color: #F1EDEF;
-}
-.menu-acessibilidade{
-    position: fixed;
-    top:2rem;
-    right:20px;
-    z-index: 1000;
-}
-
-.rotacao-botao{
-    transform: rotate(-90deg);
-    transform-origin: right center;
-}
-
-.opcoes-acessibilidade{
-    margin-top:10px;
+.parametro-senha-botoes {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
-.opcoes-acessibilidade button{
-    margin-bottom: 5px;
-}
-.apresenta-lista{
-    display: none;
-}
-
-.alto-contraste{
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+.parametro-senha__botao {
+    background-color: var(--fundo-texto);
+    color: var(--branco);
+    border: 2px solid var(--borda);
+    padding: 24px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
-.alto-contraste header,
-.alto-contraste footer,
-.alto-contraste .formulario{
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+.parametro-senha__texto {
+    padding: 24px;
+    border-top: 2px solid var(--borda);
+    border-bottom: 2px solid var(--borda);
+    margin: 0;
+    font-size: 24px;
 }
 
-.alto-contraste .nav-link{
-    color: var(--alto-contraste-link);
+label {
+    font-size: 20px;
 }
 
-.alto-contraste .botao-inicio,
-.alto-contraste .formulario button,
-.alto-contraste .btn-primary{
-    background-color: var(--alto-contraste-link);
-    color: var(--alto-contraste-fundo)
+.checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
-.alto-contraste #tropicalia {
-    background: none;
+.barra {
+    background-color: var(--fundo-senha);
+    height: 30px;
+    width: 100%;
 }
 
-.alto-contraste #galeria {
-    background-color: var(--alto-contraste-fundo);
+.forca {
+    height: 30px;
+    position: relative;
+    bottom: 30px;
 }
-.alto-contraste .fundo-galeria {
-    background: none;
+
+.fraca {
+    width: 25%;
+    background-color: #E71B32;
+}
+
+.media {
+    background-color: #FAF408;
+    width: 50%;
+}
+
+.forte {
+    background-color: #00FF85;
+    width: 100%;
+}
+
+.parametro-senha-textos {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media screen and (min-width: 768px) {
+    .parametro-coluna__senha {
+        flex-direction: row;
+    }
 }
